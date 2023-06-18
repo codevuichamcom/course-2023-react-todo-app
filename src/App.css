@@ -1,0 +1,16 @@
+.app {
+  margin: 0 auto;
+  width: 1000px;
+  text-align: center;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.app__todo-item--completed {
+  text-decoration: line-through;
+}
+.app__delete-btn {
+  margin-left: 50px;
+}
