@@ -60,14 +60,15 @@ function App() {
       </div>
       <ul className="app__todo-list">
         {todos.map(({ id, title, isCompleted }) => (
-          <li
-            className={isCompleted ? "app__todo-item--completed" : ""}
-            key={id}
-            onClick={() => {
-              handleItemClick(id);
-            }}
-          >
-            {title}
+          <li key={id}>
+            <input
+              type="checkbox"
+              checked={isCompleted}
+              onChange={() => handleItemClick(id)}
+            />
+            <span className={isCompleted ? "app__todo-item--completed" : ""}>
+              {title}
+            </span>
             <button
               className="app__delete-btn"
               onClick={(e) => {
